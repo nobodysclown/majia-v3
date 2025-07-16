@@ -1,0 +1,35 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "马甲(V3)",
+  "version": "1.0",
+  "description": "快速切换同一网站的多个已登录账号",
+  "permissions": [
+    "cookies",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "icons": {
+    "16": "majia.png",
+    "48": "majia.png",
+    "128": "majia.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["contentscript.js"]
+    }
+  ],
+  "action": {
+    "default_title": "",
+    "default_icon": "majia.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3
+}
