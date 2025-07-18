@@ -9,10 +9,7 @@ var denodify = function (fn) {
 };
 
 var hostToDomain = function (host) {
-	var a = host.split('.');
-	if (a.length > 2)
-		a = a.slice(a.length-2);
-	return a.join('.');
+	return host;
 };
 
 var cookieUrl = function (c) {
