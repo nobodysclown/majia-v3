@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		profiles.forEach(function (profile) {
 			var title = profile.title;
 			if (profile.id == data.currentProfileId)
-				title = '> '+title+' <';
+				title = '>'+title+'<';
 
 			var button = document.createElement('button');
 			button.innerHTML = title;
